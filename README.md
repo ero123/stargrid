@@ -1,4 +1,4 @@
-# stargrid
+# Stargrid.io
 
 This repo contains a copy of a project done for CS210 at Stanford University in spring 2020. 
 It is the senior Computer Science capstone of Ellen Roper, Eric Singh, Grant Russel, Tyler Yep, and Alex Wang. 
