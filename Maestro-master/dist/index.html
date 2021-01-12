@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>Stargrid.io</title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' type='text/css' href='./main.css' />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144744611-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-144744611-2');
+    </script>
+</head>
+
+<body>
+    <div class='overlay' id='name-prompt-overlay'>
+        <div class='input_container' id='name-prompt-container'>
+            <h3 id='name-header'> Join Game </h3>
+            <form id='name-form'>
+                <input type='text' id='name-input' placeholder='Nickname' autocomplete='off' />
+            </form>
+            <form id='gamecode-form'>
+                <input type='text' id='gamecode-input' placeholder='Private Game Code' autocomplete='off' />
+                <br />
+                <button id='name-submit'>
+                    Play
+                </button>
+                <button id='feedback-submit' onclick="location.href='https://forms.gle/qXQeS4ZeRbuNEDhy6'" type="button"> Feedback </button>
+            </form>
+        </div>
+    </div>
+    <div class='overlay' id='waiting-room-overlay'>
+        <div class='input_container' id='waiting-room-container'>
+            <h3 id='waiting-room-header'> Waiting for players </h3>
+            <div class="row">
+                <div class="column">
+                    <label class='name_labels_centered' id='txt_label_l'> Controller </label>
+                    <br />
+                    <label class='name_labels_centered bottom_margin' id='controller_label'> </label>
+                    <img class='check_mark' id="controller_ready_img" src="./ready.png">
+                    <button class='obj_centered' id='start-button'>
+                        Ready
+                    </button>
+                </div>
+                <div class="column">
+                    <label class='name_labels_centered' id='txt_label_r'> Viewer </label>
+                    <br />
+                    <label class='name_labels_centered bottom_margin' id='viewer_label'> </label>
+                    <img class='check_mark' id="viewer_ready_img" src="./ready.png">
+                    <button class='obj_centered' id='switch-button'>
+                        Switch Role
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="title">STARGRID</div>
+    <div id="level" class="textBox"></div>
+    <div id="score" class="textBox"></div>
+    <div id="gameover" class="textBox centered hidden">GAME OVER</div>
+    <div id="gamewin" class="textBox centered hidden">YOU WON</div>
+    <div class = "info-button"> Help
+        <div class="tooltiptext">
+            CONTROLLER: CONTROLS SHIP, CANNOT SEE MAZE
+            <br />
+            VIEWER: NAVIGATES CONTROLLER TO THE FINISH
+        </div>
+    </div>
+    <div id="instructions" class="textBox centered hidden">
+        ARROW KEYS = CONTROL SHIP
+        <br />
+        SPACE BAR = SHOOT TO REVEAL WALLS
+        <br />
+        <br />
+        MISSION: REACH THE FINISH FIRST
+        <br />
+        CONTROLLER: CONTROLS SHIP, CANNOT SEE MAZE
+        <br />
+        VIEWER: NAVIGATES CONTROLLER TO THE FINISH
+    </div>
+    <div id="other_player_disconnect" class="textBox centered hidden">
+        OTHER PLAYER DISCONNECTED
+        <br />
+        REFRESH PAGE TO START A NEW GAME
+    </div>
+    <div id="staging_alert" class="textBox centeredBottom hidden"></div>
+    <div id="winning_banner" class="textBox centeredBottom hidden"></div>
+    <div id="game_start_banner" class="textBox centeredBottom hidden"></div>
+    <div id="instruct_friend" class="textBox centeredBottom">Hey Commander, You're Going to Need a Co-Commander For This Mission<br />Create a room and call a friend to Join!</div>
+    <div id="share_link" class="textBox centeredBottom hidden"></div>
+    <div id="instructionsMobile" class="textBox centered hidden">TILT TO CONTROL SHIP</div>
+    <div class="fireButton actionButton"></div>
+    <div class="boostButton actionButton"></div>
+    <div id="scoreboard" class="textBox"></div>
+    <audio id="winning_soundclip" src="./starboy.mp3"></audio>
+    <script src="bundle.js" type="text/javascript"></script>
+    <div class="canvas" id='gameCanv'></div>
+</body>
+
+</html>
