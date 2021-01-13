@@ -9,4 +9,4 @@ was compromised as we were scattered across the country. Thus, we decided to piv
 the idea that as COVID-19 pushes us away, it is ever more important to find ways to connect individuals. We made the choice to 
 create a web-based game designed to foster communication and collaboration via socially distant means.
 
-The game is not currently being hosted but it can be played by cloning this repo and following the instructions in the Software Documentation page of the Wiki
+The game is not currently being hosted but it can be played locally following the instructions in the Software Documentation page of the Wiki
